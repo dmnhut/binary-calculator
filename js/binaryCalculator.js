@@ -19,8 +19,8 @@ function clr(e){
 function eql(e){
     let operation = e.innerHTML.match(/[+\-\*\/]/)[0];
     let nums = e.innerHTML.split(operation);
-    let $1 = parseInt(nums[0].split('').join(''), 2);
-    let $2 = parseInt(nums[1].split('').join(''), 2);
+    let $1 = parseInt(nums[0], 2);
+    let $2 = parseInt(nums[1], 2);
     let result = 0;
     switch(operation){
         case '+':
