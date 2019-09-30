@@ -19,21 +19,21 @@ function clear(e){
 function equal(e){
     let operation = e.innerHTML.match(/[+\-\*\/]/)[0];
     let nums = e.innerHTML.split(operation);
-    let $1 = parseInt(nums[0], 2);
-    let $2 = parseInt(nums[1], 2);
+    let $1 = Number(parseInt(nums[0], 2));
+    let $2 = Number(parseInt(nums[1], 2));
     let result = 0;
     switch(operation){
         case '+':
-            result = Number($1) + Number($2);
+            result = $1 + $2;
             break;
         case '-':
-            result = Number($1) - Number($2);
+            result = $1 - $2;
             break;
         case '*':
-            result = Number($1) * Number($2);
+            result = $1 * $2;
             break;
         case '/':
-            result = Number($1) / Number($2);
+            result = $1 / $2;
             break;
     }
     e.innerHTML = result.toString(2);
